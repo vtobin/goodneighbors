@@ -1,8 +1,8 @@
 This script allows the user to select any word and generate a list of "good neighbors". Good neighbors of a word are, among the 500 nearest neighbors to that word in a Word2Vec vector space, those items that also have the original word as one of their nearest neighbors. Currently the original word must be one of the 25 closest neighbors of a potential good neighbor to qualify. (Later versions of the script will allow the user to set that threshold at runtime.) 
 
-This script uses the glove-wiki-gigaword-300 pretrained model as its reference vector space. For more information about this model and others like it, see: https://github.com/RaRe-Technologies/gensim-data
+This script uses the glove-wiki-gigaword-300 pre-trained model as its reference vector space. For more information about this model and others like it, see: https://github.com/RaRe-Technologies/gensim-data
 
-Usage
+## Setup and usage: Mac OS
 
 1. Check out the code from Github: In the terminal, navigate to the directory where you want to save and run the code, then enter `git clone https://github.com/vtobin/goodneighbors.git`
 2. Navigate to the directory you've just installed: `cd goodneighbors/`
