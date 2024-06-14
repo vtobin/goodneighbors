@@ -9,7 +9,7 @@ This script uses the glove-wiki-gigaword-300 pre-trained model as its reference 
 3. Now you'll set up a virtual environment so that the code runs locally:
    1. Enter `python3 -m venv env` You'll only need to do this the first time you run the script.
    2. Enter `source env/bin/activate` You'll need to do this every time you start a new session. If you see `(env)` in your terminal prompt, you've already done this and don't need to do it again.
-   3. Enter `pip install -r requirements.txt` You only need to do this the first time you run the script.
+   3. Enter `pip install -r requirements.txt` You only need to do this the first time you run the script. (gensim 4.3.2 cannot use recent releases of scipy due to [this issue](https://github.com/piskvorky/gensim/pull/3524). These requirements therefore specify an older version of scipy, but you may run into trouble if you already have a more recent version installed. As a workaround, if the script does not run, try installing an older version of scipy: pip install "scipy<1.13")
 4. To run the script, type `python similar.py [word]`, substituting the word you want to explore for `[word]`. For example, to explore "surprise," type `python similar.py surprise`. The script will take a little while to run. Be patient! 
    1. By default, the script will return a list of "good neighbors" and a numerical representation of how similar/close they are to the word you're exploring in the Word2Vec space.
    2. If you would like to see a list of options available for customizing the output, type `python similar.py -h` or `python similar --help`
